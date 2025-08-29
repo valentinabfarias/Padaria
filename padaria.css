@@ -1,62 +1,59 @@
-
+.fundo{
+    background-color: #f5cdab;
+}
 .cabeca{
     width: 100%;
     height: 150px;
     background-color: #C08552;
-    padding-top: 20px;
+    padding-top: 35px;
 }
 .MP{
     font-family: "Manrope", sans-serif;
     margin-left: 520px;
 }
-.nav-link{
+.nav-item{
     text-decoration-color: black;
 }
 .caixa{
     display: block;
     height: 370px;
     width: 260px;
-    background-color: aqua;
+    background-color: #C08552;
     border-radius: 10px;
     margin-left: 55px;
-    margin-top: 20px;
+    margin-top: 50px;
     float: left;
-}
-.img1{
-    width: 260px;
-   
-}
-.caixa1{
-    display: block;
-    height: 370px;
-    width: 260px;
-    background-color: aqua;
-    border-radius: 10px;
-    margin-left: 40px;
-    margin-top: 20px;
-    float: left;
-}
-.img2{
-   
 }
 
-.caixa2{
-    display: block;
-    height: 370px;
+.img1{
     width: 260px;
-    background-color: aqua;
-    border-radius: 10px;
-    margin-left: 40px;
-    margin-top: 20px;
-    float: left;
+    border-radius: 10px 10px 0px 0px;
 }
-.caixa3{
+
+
+.nome{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+a{
+    color: black;
+}
+.barra{
+    float: right;
+    margin-top: -40px;
+    margin-right: 50px;
+    border-radius: 5px;
+}
+.botao{
+    background-image: url('./img/lupa.png');
+    width: 30px;
+    height: 30px;
     display: block;
-    height: 370px;
-    width: 260px;
-    background-color: aqua;
-    border-radius: 10px;
-    margin-left: 40px;
-    margin-top: 20px;
-    float: left;
+    background-size: 100%;
+    float: right;
+    margin-top: -40px;
+    margin-right: 18px;
 }
