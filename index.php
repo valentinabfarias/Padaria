@@ -1,5 +1,4 @@
 <?php
-
 include_once './conexao.php';
 ?>
 
@@ -41,14 +40,21 @@ include_once './conexao.php';
         </div>
     </header>
     <body class="fundo">
-
+      <?php
+      $sql = 'SELECT * FROM padaria;';
+      $resultado = mysqli_query($conexao,$sql);
+      while ($dado = mysqli_fetch_assoc($resultado)){
+      ?>
         <div class="caixa">
-            <a href="./produto.html">
-                <img class="img1"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXVYfbik--ntEwQPlyw8Yn4OWnuURS_3nD2A&s" alt="">
-                <h2 class="nome">Brownie com Morango</h2>
-                <h2 class="preco">R$10,00</h2>
+            <a href="./produto.php?produto=<?php echo $dado['codigo']?>">
+                <img class="img1"  src="<?php echo $dado['imagem'];?>" alt="">
+                <h2 class="nome"><?php echo $dado['descricao']?></h2>
+                <h2 class="preco">R$ <?php echo $dado['valor']?>,00</h2>
             </a>
-        </div>  
+        </div> 
+        <?php 
+        }
+        ?> 
     </body>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
